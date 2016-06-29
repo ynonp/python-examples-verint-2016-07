@@ -2,8 +2,3 @@
 and prints their sum.
 """
 
-import sys
-
-(program_name, num1, num2) = sys.argv
-
-print "%g + %g = %g" % (float(num1), float(num2), float(num1) + float(num2))

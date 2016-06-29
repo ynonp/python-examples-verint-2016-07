@@ -8,12 +8,3 @@ For example:
     returns: { 'f': ['foo','fi'], 'h': ['hello', 'hi'] }
 """
 
-def groupby(f, words):
-    res = {}
-    for word in words:
-        key = f(word)
-        res.setdefault(key, []).append(word)
-
-    return res
-
-print groupby(lambda s: frozenset(s), ['add', 'dad', 'help','rome', 'more'])

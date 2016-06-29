@@ -9,24 +9,3 @@ its name to the user.
 - Take threshold and path as command line arguments
 """
 
-import os
-import sys
-
-threshold = 1024
-path = "."
-
-if len(sys.argv) > 1:
-    path = sys.argv[1]
-
-if len(sys.argv) > 2:
-    threshold = int(sys.argv[2])
-
-
-for root, dirs, files in os.walk(path):
-    for name in files:
-        size = os.stat(name).st_size
-        if size > threshold:
-            print "Found: %s > %d" % (name, threshold)
-            print "Do you want to delete it? (y/N)"
-            yesno = raw_input()
-            if yesno.lower() == "y": os.remove(name)
