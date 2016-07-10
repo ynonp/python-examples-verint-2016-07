@@ -1,6 +1,5 @@
 """
-Write a python program that takes two words
-as sys.argv and prints only the letters
-common to both
+Find and print all possible sequences
+of 3 lowercase characters: aaa, aab, aac, ..., zzz
 """
 
